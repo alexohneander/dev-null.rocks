@@ -1,0 +1,10 @@
+<h1>Zone Configuration</h1>
+
+<p>Welcome <a href="/users/edit"><%= current_user.email %></a>, how are you doing?</p>
+
+<h2>Zones</h2>
+<% @zones.first(10).each do |zone| %>
+<p>
+  <%= zone %>
+</p>
+<% end %>

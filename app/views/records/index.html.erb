@@ -1,0 +1,10 @@
+<h1>Record Configuration</h1>
+
+<p>Welcome <a href="/users/edit"><%= current_user.email %></a>, how are you doing?</p>
+
+<h2>Records</h2>
+<% @records.first(10).each do |record| %>
+<p>
+  <%= record %>
+</p>
+<% end %>

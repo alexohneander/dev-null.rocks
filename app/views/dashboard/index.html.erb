@@ -1,0 +1,29 @@
+<h1>Dashboard</h1>
+<p>Welcome <a href="/users/edit"><%= current_user.email %></a>, how are you doing?</p>
+
+<h2>Stats</h2>
+<p>
+    <b>Queries:</b><br/>
+    <%= @stats_backend_queries %>
+</p>
+<p>
+    <b>Cached Keys:</b><br/>
+    <%= @stats_cached_keys %>
+</p>
+<p>
+    <b>Cache hits:</b><br/>
+    <%= @stats_cache_hits %>
+</p>
+<p>
+    <b>Cache miss:</b><br/>
+    <%= @stats_cache_miss %>
+</p>
+<p>
+    <b>Latency:</b><br/>
+    <%= @stats_latency %>
+</p>
+
+<p>
+    <b>Stuff:</b><br/>
+    <%= @stuff %>
+</p>
