@@ -10,6 +10,8 @@ class ZonesController < ApplicationController
     result = api_instance.list_zones(server_id)
     zones = result.select { |zone| zone.account == current_user.username }
 
+    puts zones
+
     @zones = zones
   end
 end

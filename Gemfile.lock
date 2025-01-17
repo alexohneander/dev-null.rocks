@@ -379,6 +379,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  base64 (~> 0.2.0)
   bootsnap
   brakeman
   byebug

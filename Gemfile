@@ -66,3 +66,5 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
+
+gem "base64", "~> 0.2.0"

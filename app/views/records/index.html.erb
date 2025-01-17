@@ -1,10 +1,46 @@
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #04AA6D;
+    color: white;
+  }
+</style>
+
 <h1>Record Configuration</h1>
 
 <p>Welcome <a href="/users/edit"><%= current_user.email %></a>, how are you doing?</p>
 
 <h2>Records</h2>
-<% @records.first(10).each do |record| %>
-<p>
-  <%= record %>
-</p>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>TTL</th>
+      <th>Content</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.name %></td>
+        <td><%= record.type %></td>
+        <td><%= record.ttl %></td>
+        <td><%= record.records[0].content %></td>
+        <td><%= link_to "Show", "/dashboard/records" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
